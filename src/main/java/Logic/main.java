@@ -21,14 +21,23 @@ public class main {
         System.out.println("Yes/No ?");
         Scanner inputLine = new Scanner(System.in);
         String inputText = inputLine.nextLine();
+        playGame = startGame(inputText);
+        String randomWord = getRandomWord();
+    }
+
+    private static boolean startGame(String inputText) {
         if(inputText.equalsIgnoreCase("yes") || inputText.equalsIgnoreCase("y")){
-            playGame = true;
             System.out.println("Lets Start!");
+            return true;
         } else{
-            playGame = false;
             System.out.println("Ok, come back later!");
             System.exit(0);
+            return false;
         }
+    }
+
+    private static String getRandomWord() {
+        
     }
     
 }
